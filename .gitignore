@@ -10,3 +10,5 @@ cucumber/TEST-*.xml
 *.xcuserstate
 .idea
 tags
+*.build
+Debug-*

@@ -1,3 +1,4 @@
+#import <CoreGraphics/CoreGraphics.h>
 #import "StackPanel.h"
 
 @implementation StackPanel
@@ -5,13 +6,11 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
 
-    float yPosition = 0;
+    CGFloat yOffset = 0;
     for (UIView *subview in self.subviews) {
-        if (!subview.hidden) {
-            CGSize size = subview.bounds.size;
-            subview.frame = CGRectMake(0, yPosition, size.width, size.height);
-            yPosition += size.height;
-        }
+        CGSize size = subview.bounds.size;
+        subview.frame = CGRectMake(0, yOffset, size.width, size.height);
+        yOffset += size.height;
     }
 }
 

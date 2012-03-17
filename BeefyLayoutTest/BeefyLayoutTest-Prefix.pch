@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'BeefyLayoutTest' target in the 'BeefyLayoutTest' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
