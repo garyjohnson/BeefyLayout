@@ -117,6 +117,31 @@ SPEC_BEGIN(StackPanelSpec)
                     }
                 });
             });
+
+            context(@"when given multiple views and orientation is horizontal", ^{
+                beforeEach(^{
+                    childView1 = [[[UIView alloc] init] autorelease];
+                    childView1.frame = CGRectMake(20, 20, 400, 200);
+                    childView2 = [[[UIView alloc] init] autorelease];
+                    childView2.frame = CGRectMake(90, 20, 400, 200);
+                    childView3 = [[[UIView alloc] init] autorelease];
+                    childView3.frame = CGRectMake(20, 10, 400, 200);
+                    stackPanel = [[[StackPanel alloc] init] autorelease];
+                    stackPanel.orientation = Horizontal;
+
+                    [stackPanel addSubview:childView1];
+                    [stackPanel addSubview:childView2];
+                    [stackPanel addSubview:childView3];
+                });
+
+                it(@"lays out subviews at Y origin", ^{
+                    [stackPanel layoutSubviews];
+
+                    for(UIView *view in stackPanel.subviews) {
+                        [[theValue(view.frame.origin.y) should] equal:theValue(0)];
+                    }
+                });
+            });
         });
 
 SPEC_END
