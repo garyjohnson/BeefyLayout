@@ -2,4 +2,6 @@
 
 @interface StackPanel : UIView
 
+@property (nonatomic, readwrite) BOOL isReversed;
+
 @end
