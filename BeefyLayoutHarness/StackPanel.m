@@ -2,14 +2,6 @@
 
 @implementation StackPanel
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-    }
-    return self;
-}
-
 - (void)layoutSubviews {
     [super layoutSubviews];
 
