@@ -1,0 +1,12 @@
+*/DerivedData/
+.DS_Store
+eriemobile_iphone/build
+xcuserdata
+*.xcworkspace
+*.xcuserdatad
+.rvmrc
+.*.swp
+cucumber/TEST-*.xml
+*.xcuserstate
+.idea
+tags

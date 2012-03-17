@@ -1,0 +1,293 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C523E06151443FE007D9B09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C523E05151443FE007D9B09 /* UIKit.framework */; };
+		8C523E08151443FE007D9B09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C523E07151443FE007D9B09 /* Foundation.framework */; };
+		8C523E0A151443FE007D9B09 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C523E09151443FE007D9B09 /* CoreGraphics.framework */; };
+		8C523E10151443FE007D9B09 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C523E0E151443FE007D9B09 /* InfoPlist.strings */; };
+		8C523E12151443FE007D9B09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C523E11151443FE007D9B09 /* main.m */; };
+		8C523E16151443FF007D9B09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C523E15151443FF007D9B09 /* AppDelegate.m */; };
+		8C523E19151443FF007D9B09 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C523E17151443FF007D9B09 /* MainStoryboard_iPhone.storyboard */; };
+		8C523E1C151443FF007D9B09 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C523E1A151443FF007D9B09 /* MainStoryboard_iPad.storyboard */; };
+		8C523EAE151450A7007D9B09 /* StackPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C523EAD151450A7007D9B09 /* StackPanel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8C523E01151443FE007D9B09 /* BeefyLayoutHarness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeefyLayoutHarness.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C523E05151443FE007D9B09 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8C523E07151443FE007D9B09 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8C523E09151443FE007D9B09 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8C523E0D151443FE007D9B09 /* BeefyLayoutHarness-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BeefyLayoutHarness-Info.plist"; sourceTree = "<group>"; };
+		8C523E0F151443FE007D9B09 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8C523E11151443FE007D9B09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8C523E13151443FE007D9B09 /* BeefyLayoutHarness-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeefyLayoutHarness-Prefix.pch"; sourceTree = "<group>"; };
+		8C523E14151443FF007D9B09 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8C523E15151443FF007D9B09 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8C523E18151443FF007D9B09 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		8C523E1B151443FF007D9B09 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		8C523EAC151450A7007D9B09 /* StackPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackPanel.h; sourceTree = "<group>"; };
+		8C523EAD151450A7007D9B09 /* StackPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackPanel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C523DFE151443FE007D9B09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C523E06151443FE007D9B09 /* UIKit.framework in Frameworks */,
+				8C523E08151443FE007D9B09 /* Foundation.framework in Frameworks */,
+				8C523E0A151443FE007D9B09 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C523DF6151443FE007D9B09 = {
+			isa = PBXGroup;
+			children = (
+				8C523E0B151443FE007D9B09 /* BeefyLayoutHarness */,
+				8C523E04151443FE007D9B09 /* Frameworks */,
+				8C523E02151443FE007D9B09 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8C523E02151443FE007D9B09 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C523E01151443FE007D9B09 /* BeefyLayoutHarness.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C523E04151443FE007D9B09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C523E05151443FE007D9B09 /* UIKit.framework */,
+				8C523E07151443FE007D9B09 /* Foundation.framework */,
+				8C523E09151443FE007D9B09 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C523E0B151443FE007D9B09 /* BeefyLayoutHarness */ = {
+			isa = PBXGroup;
+			children = (
+				8C523E14151443FF007D9B09 /* AppDelegate.h */,
+				8C523E15151443FF007D9B09 /* AppDelegate.m */,
+				8C523E17151443FF007D9B09 /* MainStoryboard_iPhone.storyboard */,
+				8C523E1A151443FF007D9B09 /* MainStoryboard_iPad.storyboard */,
+				8C523E0C151443FE007D9B09 /* Supporting Files */,
+				8C523EAC151450A7007D9B09 /* StackPanel.h */,
+				8C523EAD151450A7007D9B09 /* StackPanel.m */,
+			);
+			path = BeefyLayoutHarness;
+			sourceTree = "<group>";
+		};
+		8C523E0C151443FE007D9B09 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C523E0D151443FE007D9B09 /* BeefyLayoutHarness-Info.plist */,
+				8C523E0E151443FE007D9B09 /* InfoPlist.strings */,
+				8C523E11151443FE007D9B09 /* main.m */,
+				8C523E13151443FE007D9B09 /* BeefyLayoutHarness-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8C523E00151443FE007D9B09 /* BeefyLayoutHarness */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C523E22151443FF007D9B09 /* Build configuration list for PBXNativeTarget "BeefyLayoutHarness" */;
+			buildPhases = (
+				8C523DFD151443FE007D9B09 /* Sources */,
+				8C523DFE151443FE007D9B09 /* Frameworks */,
+				8C523DFF151443FE007D9B09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BeefyLayoutHarness;
+			productName = BeefyLayoutHarness;
+			productReference = 8C523E01151443FE007D9B09 /* BeefyLayoutHarness.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8C523DF8151443FE007D9B09 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 8C523DFB151443FE007D9B09 /* Build configuration list for PBXProject "BeefyLayoutHarness" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8C523DF6151443FE007D9B09;
+			productRefGroup = 8C523E02151443FE007D9B09 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C523E00151443FE007D9B09 /* BeefyLayoutHarness */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C523DFF151443FE007D9B09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C523E10151443FE007D9B09 /* InfoPlist.strings in Resources */,
+				8C523E19151443FF007D9B09 /* MainStoryboard_iPhone.storyboard in Resources */,
+				8C523E1C151443FF007D9B09 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C523DFD151443FE007D9B09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C523E12151443FE007D9B09 /* main.m in Sources */,
+				8C523E16151443FF007D9B09 /* AppDelegate.m in Sources */,
+				8C523EAE151450A7007D9B09 /* StackPanel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8C523E0E151443FE007D9B09 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C523E0F151443FE007D9B09 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8C523E17151443FF007D9B09 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C523E18151443FF007D9B09 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		8C523E1A151443FF007D9B09 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C523E1B151443FF007D9B09 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8C523E20151443FF007D9B09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8C523E21151443FF007D9B09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8C523E23151443FF007D9B09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BeefyLayoutHarness/BeefyLayoutHarness-Prefix.pch";
+				INFOPLIST_FILE = "BeefyLayoutHarness/BeefyLayoutHarness-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8C523E24151443FF007D9B09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BeefyLayoutHarness/BeefyLayoutHarness-Prefix.pch";
+				INFOPLIST_FILE = "BeefyLayoutHarness/BeefyLayoutHarness-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C523DFB151443FE007D9B09 /* Build configuration list for PBXProject "BeefyLayoutHarness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C523E20151443FF007D9B09 /* Debug */,
+				8C523E21151443FF007D9B09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C523E22151443FF007D9B09 /* Build configuration list for PBXNativeTarget "BeefyLayoutHarness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C523E23151443FF007D9B09 /* Debug */,
+				8C523E24151443FF007D9B09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8C523DF8151443FE007D9B09 /* Project object */;
+}
