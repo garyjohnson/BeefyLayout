@@ -3,14 +3,12 @@
 
 @interface StackPanel ()
 - (void)layoutSubviewsHorizontallyReversed;
-
 - (CGFloat)availableHeightForEachFillSubview;
 
+- (CGFloat)availableWidthForEachFillSubview;
 
 - (void)layoutSubviewsVertically;
-
 - (void)layoutSubviewsVerticallyReversed;
-
 - (void)layoutSubviewsHorizontally;
 @end
 
@@ -64,11 +62,16 @@
 }
 
 - (void)layoutSubviewsHorizontally {
+    CGFloat availableWidth = [self availableWidthForEachFillSubview];
     CGFloat xOffset = 0;
     for (UIView *subview in self.subviews) {
         CGSize subviewSize = subview.bounds.size;
-        subview.frame = CGRectMake(xOffset + subview.marginLeft, subview.marginTop, subviewSize.width, subviewSize.height);
-        xOffset += subviewSize.width + subview.marginLeft + subview.marginRight;
+        CGFloat subviewWidth = subviewSize.width;
+        if (subview.fillAvailableSpace) {
+            subviewWidth = availableWidth;
+        }
+        subview.frame = CGRectMake(xOffset + subview.marginLeft, subview.marginTop, subviewWidth, subviewSize.height);
+        xOffset += subviewWidth + subview.marginLeft + subview.marginRight;
     }
 }
 
@@ -92,6 +95,18 @@
         availableHeight -= (subview.marginBottom + subview.marginTop);
     }
     return availableHeight;
+}
+
+- (CGFloat)availableWidthForEachFillSubview {
+    CGFloat availableWidth = self.bounds.size.width;
+    for (UIView *subview in self.subviews) {
+        CGSize subviewSize = subview.bounds.size;
+        if (!subview.fillAvailableSpace) {
+            availableWidth -= subviewSize.width;
+        }
+        availableWidth -= (subview.marginLeft + subview.marginRight);
+    }
+    return availableWidth;
 }
 
 @end

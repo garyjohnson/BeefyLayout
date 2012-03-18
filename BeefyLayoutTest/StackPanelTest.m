@@ -392,6 +392,42 @@ SPEC_BEGIN(StackPanelSpec)
                         }
                     }
                 });
+
+                it(@"stretches 'fillAvailableSpace' subview to width of parent minus widths of other subviews", ^{
+                    stackPanel.frame = CGRectMake(0, 0, 3000, 1000);
+                    UIView *secondSubview = [stackPanel.subviews objectAtIndex:1];
+                    secondSubview.fillAvailableSpace = YES;
+
+                    [stackPanel layoutSubviews];
+
+                    [[theValue(secondSubview.frame.size.height) should] equal:theValue(200)];
+                    [[theValue(secondSubview.frame.size.width) should] equal:theValue(2200)];
+                });
+
+                it(@"lays out subview after 'fillAvailableSpace' subview at correct position", ^{
+                    stackPanel.frame = CGRectMake(0, 0, 3000, 1000);
+                    UIView *secondSubview = [stackPanel.subviews objectAtIndex:1];
+                    UIView *thirdSubview = [stackPanel.subviews objectAtIndex:2];
+                    secondSubview.fillAvailableSpace = YES;
+
+                    [stackPanel layoutSubviews];
+
+                    [[theValue(thirdSubview.frame.origin.x) should] equal:theValue(2600)];
+                });
+
+                it(@"takes subview margins into account when stretching 'fillAvailableSpace' subviews", ^{
+                    stackPanel.frame = CGRectMake(0, 0, 3000, 1000);
+                    UIView *secondSubview = [stackPanel.subviews objectAtIndex:1];
+                    secondSubview.fillAvailableSpace = YES;
+                    for (UIView *view in stackPanel.subviews) {
+                        view.marginLeft = 5.0f;
+                        view.marginRight = 10.0f;
+                    }
+
+                    [stackPanel layoutSubviews];
+
+                    [[theValue(secondSubview.frame.size.width) should] equal:theValue(2155)];
+                });
             });
 
             context(@"when given multiple views | horizontal | reversed", ^{
