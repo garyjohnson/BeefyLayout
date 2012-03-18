@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8efc463e-c569-4587-9c1f-2a01b2596d10" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BeefyLayoutHarness/StackPanel.m" afterPath="$PROJECT_DIR$/BeefyLayoutHarness/StackPanel.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BeefyLayoutTest/StackPanelTest.m" afterPath="$PROJECT_DIR$/BeefyLayoutTest/StackPanelTest.m" />
     </list>
     <ignored path="BeefyLayout.iws" />
@@ -28,7 +27,7 @@
       <file leaf-file-name="StackPanelTest.m" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BeefyLayoutTest/StackPanelTest.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="206" column="49" selection-start="9308" selection-end="9308" vertical-scroll-proportion="0.8886076">
+            <state line="179" column="0" selection-start="7379" selection-end="7379" vertical-scroll-proportion="0.8886076">
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -327,7 +326,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BeefyLayoutTest/StackPanelTest.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="206" column="49" selection-start="9308" selection-end="9308" vertical-scroll-proportion="0.8886076">
+        <state line="179" column="0" selection-start="7379" selection-end="7379" vertical-scroll-proportion="0.8886076">
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
