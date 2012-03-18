@@ -1,10 +1,13 @@
-#import <CoreGraphics/CoreGraphics.h>
 #import "StackPanel.h"
+#import "UIView+BeefyLayout.h"
 
 @interface StackPanel ()
 - (void)layoutSubviewsHorizontallyReversed;
+
 - (void)layoutSubviewsVertically;
+
 - (void)layoutSubviewsVerticallyReversed;
+
 - (void)layoutSubviewsHorizontally;
 @end
 
@@ -27,40 +30,40 @@
     }
 }
 
-- (void)layoutSubviewsHorizontallyReversed {
-    CGFloat xOffset = self.bounds.size.width;
-    for (UIView *subview in self.subviews) {
-            CGSize subviewSize = subview.bounds.size;
-            xOffset -= subviewSize.width;
-            subview.frame = CGRectMake(xOffset, 0, subviewSize.width, subviewSize.height);
-        }
-}
-
 - (void)layoutSubviewsVertically {
     CGFloat yOffset = 0;
     for (UIView *subview in self.subviews) {
-            CGSize subviewSize = subview.bounds.size;
-            subview.frame = CGRectMake(0, yOffset, subviewSize.width, subviewSize.height);
-            yOffset += subviewSize.height;
-        }
+        CGSize subviewSize = subview.bounds.size;
+        subview.frame = CGRectMake(subview.marginLeft, yOffset + subview.marginTop, subviewSize.width, subviewSize.height);
+        yOffset += subviewSize.height + subview.marginTop + subview.marginBottom;
+    }
 }
 
 - (void)layoutSubviewsVerticallyReversed {
     CGFloat yOffset = self.bounds.size.height;
     for (UIView *subview in self.subviews) {
-            CGSize subviewSize = subview.bounds.size;
-            yOffset -= subviewSize.height;
-            subview.frame = CGRectMake(0, yOffset, subviewSize.width, subviewSize.height);
-        }
+        CGSize subviewSize = subview.bounds.size;
+        yOffset -= subviewSize.height;
+        subview.frame = CGRectMake(0, yOffset, subviewSize.width, subviewSize.height);
+    }
+}
+
+- (void)layoutSubviewsHorizontallyReversed {
+    CGFloat xOffset = self.bounds.size.width;
+    for (UIView *subview in self.subviews) {
+        CGSize subviewSize = subview.bounds.size;
+        xOffset -= subviewSize.width;
+        subview.frame = CGRectMake(xOffset, 0, subviewSize.width, subviewSize.height);
+    }
 }
 
 - (void)layoutSubviewsHorizontally {
     CGFloat xOffset = 0;
     for (UIView *subview in self.subviews) {
-            CGSize subviewSize = subview.bounds.size;
-            subview.frame = CGRectMake(xOffset, 0, subviewSize.width, subviewSize.height);
-            xOffset += subviewSize.width;
-        }
+        CGSize subviewSize = subview.bounds.size;
+        subview.frame = CGRectMake(xOffset, 0, subviewSize.width, subviewSize.height);
+        xOffset += subviewSize.width;
+    }
 }
 
 @end

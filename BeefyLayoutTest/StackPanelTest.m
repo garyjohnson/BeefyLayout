@@ -84,7 +84,7 @@ SPEC_BEGIN(StackPanelSpec)
                     }
                 });
 
-/*                it(@"respects left margin on subview", ^{
+                it(@"respects left margin on subview", ^{
                     UIView *secondSubview = [stackPanel.subviews objectAtIndex:1];
                     secondSubview.marginLeft = 20;
 
@@ -97,7 +97,46 @@ SPEC_BEGIN(StackPanelSpec)
                             [[theValue(view.frame.origin.x) should] equal:theValue(0)];
                         }
                     }
-                });*/
+                });
+
+                it(@"respects top margin on subview", ^{
+                    UIView *secondSubview = [stackPanel.subviews objectAtIndex:1];
+                    secondSubview.marginTop = 20;
+
+                    [stackPanel layoutSubviews];
+
+                    CGFloat yOffset = 0;
+                    for (UIView *view in stackPanel.subviews) {
+                        CGRect frame = view.frame;
+                        if (view == secondSubview) {
+                            [[theValue(frame.origin.y) should] equal:theValue(yOffset + 20)];
+                            yOffset += frame.size.height + 20;
+                        } else {
+                            [[theValue(frame.origin.y) should] equal:theValue(yOffset)];
+                            yOffset += frame.size.height;
+                        }
+                    }
+                });
+
+                it(@"respects bottom margin on subview", ^{
+                    UIView *secondSubview = [stackPanel.subviews objectAtIndex:1];
+                    UIView *thirdSubview = [stackPanel.subviews objectAtIndex:2];
+                    secondSubview.marginBottom = 20;
+
+                    [stackPanel layoutSubviews];
+
+                    CGFloat yOffset = 0;
+                    for (UIView *view in stackPanel.subviews) {
+                        CGRect frame = view.frame;
+                        if (view == thirdSubview) {
+                            [[theValue(frame.origin.y) should] equal:theValue(yOffset + 20)];
+                            yOffset += frame.size.height + 20;
+                        } else {
+                            [[theValue(frame.origin.y) should] equal:theValue(yOffset)];
+                            yOffset += frame.size.height;
+                        }
+                    }
+                });
             });
 
             context(@"when given multiple views | vertical | reversed", ^{
