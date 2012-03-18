@@ -197,10 +197,29 @@ SPEC_BEGIN(StackPanelSpec)
 
                     [stackPanel layoutSubviews];
 
-                    CGFloat yOffset = 0;
+                    CGFloat yOffset = stackPanel.bounds.size.height;
                     for (UIView *view in stackPanel.subviews) {
                         CGRect frame = view.frame;
                         if (view == thirdSubview) {
+                            yOffset -= (frame.size.height + 20);
+                            [[theValue(frame.origin.y) should] equal:theValue(yOffset)];
+                        } else {
+                            yOffset -= frame.size.height;
+                            [[theValue(frame.origin.y) should] equal:theValue(yOffset)];
+                        }
+                    }
+                });
+
+                it(@"respects bottom margin on subview", ^{
+                    UIView *secondSubview = [stackPanel.subviews objectAtIndex:1];
+                    secondSubview.marginBottom = 20;
+
+                    [stackPanel layoutSubviews];
+
+                    CGFloat yOffset = 0;
+                    for (UIView *view in stackPanel.subviews) {
+                        CGRect frame = view.frame;
+                        if (view == secondSubview) {
                             yOffset -= (frame.size.height + 20);
                             [[theValue(frame.origin.y) should] equal:theValue(yOffset)];
                         } else {
