@@ -174,6 +174,21 @@ SPEC_BEGIN(StackPanelSpec)
                         [[theValue(frame.origin.y) should] equal:theValue(yOffset)];
                     }
                 });
+
+                it(@"respects left margin on subview", ^{
+                    UIView *secondSubview = [stackPanel.subviews objectAtIndex:1];
+                    secondSubview.marginLeft = 20;
+
+                    [stackPanel layoutSubviews];
+
+                    for (UIView *view in stackPanel.subviews) {
+                        if (view == secondSubview) {
+                            [[theValue(view.frame.origin.x) should] equal:theValue(20)];
+                        } else {
+                            [[theValue(view.frame.origin.x) should] equal:theValue(0)];
+                        }
+                    }
+                });
             });
 
             context(@"when given multiple views | horizontal | not reversed", ^{
