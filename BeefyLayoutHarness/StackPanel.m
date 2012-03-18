@@ -1,5 +1,11 @@
 #import "StackPanel.h"
 
+@interface StackPanel ()
+- (CGFloat)initialOffset;
+
+- (CGRect)buildLayoutRectWithOffset:(CGFloat)offset andSize:(CGSize)size;
+@end
+
 @implementation StackPanel
 
 @synthesize isReversed = isReversed_;
@@ -8,39 +14,49 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
 
-    if (orientation_ == Vertical) {
+    CGFloat offset = [self initialOffset];
+    for (UIView *subview in self.subviews) {
+        CGSize size = subview.bounds.size;
+        CGFloat subviewSizeOffset = [self fetchSizeOffset:size];
+
         if (!isReversed_) {
-            CGFloat yOffset = 0;
-            for (UIView *subview in self.subviews) {
-                CGSize size = subview.bounds.size;
-                subview.frame = CGRectMake(0, yOffset, size.width, size.height);
-                yOffset += size.height;
-            }
+            subview.frame = [self buildLayoutRectWithOffset:offset andSize:size];
+            offset += subviewSizeOffset;
         } else {
-            CGFloat yOffset = self.bounds.size.height;
-            for (UIView *subview in self.subviews) {
-                CGSize size = subview.bounds.size;
-                yOffset -= size.height;
-                subview.frame = CGRectMake(0, yOffset, size.width, size.height);
-            }
-        }
-    } else if (orientation_ == Horizontal) {
-        if (!isReversed_) {
-            CGFloat xOffset = 0;
-            for (UIView *subview in self.subviews) {
-                CGSize size = subview.bounds.size;
-                subview.frame = CGRectMake(xOffset, 0, size.width, size.height);
-                xOffset += size.width;
-            }
-        } else {
-            CGFloat xOffset = self.bounds.size.width;
-            for (UIView *subview in self.subviews) {
-                CGSize size = subview.bounds.size;
-                xOffset -= size.width;
-                subview.frame = CGRectMake(xOffset, 0, size.width, size.height);
-            }
+            offset -= subviewSizeOffset;
+            subview.frame = [self buildLayoutRectWithOffset:offset andSize:size];
         }
     }
+}
+
+- (CGFloat)fetchSizeOffset:(CGSize)size {
+    CGFloat sizeOffset = 0;
+    if (orientation_ == Vertical) {
+        sizeOffset = size.height;
+    } else if (orientation_ == Horizontal) {
+        sizeOffset = size.width;
+    }
+    return sizeOffset ;
+}
+
+- (CGFloat)initialOffset {
+    CGFloat offset = 0;
+    if (isReversed_ && orientation_ == Vertical) {
+        offset = self.bounds.size.height;
+    } else if (isReversed_ && orientation_ == Horizontal) {
+        offset = self.bounds.size.width;
+    }
+    return offset;
+}
+
+- (CGRect)buildLayoutRectWithOffset:(CGFloat)offset andSize:(CGSize)size {
+    CGRect rect;
+    if (orientation_ == Vertical) {
+        rect = CGRectMake(0, offset, size.width, size.height);
+    } else if (orientation_ == Horizontal) {
+        rect = CGRectMake(offset, 0, size.width, size.height);
+    }
+    return rect;
 }
 
 @end

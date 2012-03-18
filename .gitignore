@@ -12,3 +12,4 @@ cucumber/TEST-*.xml
 tags
 *.build
 Debug-*
+workspace.xml
