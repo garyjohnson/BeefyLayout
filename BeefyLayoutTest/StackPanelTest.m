@@ -187,6 +187,28 @@ SPEC_BEGIN(StackPanelSpec)
                         [[theValue(view.frame.origin.y) should] equal:theValue(0)];
                     }
                 });
+
+                it(@"places the first views right edge against the right edge of the stackpanel", ^{
+                    [stackPanel layoutSubviews];
+
+                    UIView *firstView = [stackPanel.subviews objectAtIndex:0];
+                    CGPoint origin = firstView.frame.origin;
+                    CGSize stackPanelSize = stackPanel.bounds.size;
+                    CGFloat expectedOrigin = stackPanelSize.width - firstView.bounds.size.width;
+                    [[theValue(origin.x) should] equal:theValue(expectedOrigin)];
+                });
+
+                it(@"stacks each child to the left of previous one", ^{
+                    [stackPanel layoutSubviews];
+
+                    CGSize stackPanelSize = stackPanel.bounds.size;
+                    CGFloat xOffset = stackPanelSize.width;
+                    for(UIView *view in stackPanel.subviews) {
+                        CGRect frame = view.frame;
+                        xOffset -= frame.size.width;
+                        [[theValue(frame.origin.x) should] equal:theValue(xOffset)];
+                    }
+                });
             });
         });
 

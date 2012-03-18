@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8efc463e-c569-4587-9c1f-2a01b2596d10" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BeefyLayoutHarness/en.lproj/MainStoryboard_iPhone.storyboard" afterPath="$PROJECT_DIR$/BeefyLayoutHarness/en.lproj/MainStoryboard_iPhone.storyboard" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BeefyLayoutHarness/StackPanel.m" afterPath="$PROJECT_DIR$/BeefyLayoutHarness/StackPanel.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BeefyLayoutTest/StackPanelTest.m" afterPath="$PROJECT_DIR$/BeefyLayoutTest/StackPanelTest.m" />
     </list>
     <ignored path="BeefyLayout.iws" />
@@ -29,7 +28,7 @@
       <file leaf-file-name="StackPanelTest.m" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BeefyLayoutTest/StackPanelTest.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="184" column="0" selection-start="8196" selection-end="8196" vertical-scroll-proportion="0.8886076">
+            <state line="206" column="49" selection-start="9308" selection-end="9308" vertical-scroll-proportion="0.8886076">
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -58,10 +57,10 @@
       <file leaf-file-name="StackPanel.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BeefyLayoutHarness/StackPanel.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="12" selection-start="557" selection-end="557" vertical-scroll-proportion="0.0">
+            <state line="25" column="8" selection-start="840" selection-end="840" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#0#37#0" expanded="true" />
-                <marker date="1332043232000" expanded="true" signature="287:568" placeholder="..." />
+                <element signature="e#52#89#0" expanded="true" />
+                <marker date="1332045933000" expanded="true" signature="249:530" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -318,17 +317,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BeefyLayoutHarness/StackPanel.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="12" selection-start="557" selection-end="557" vertical-scroll-proportion="0.0">
+        <state line="25" column="8" selection-start="840" selection-end="840" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
-            <marker date="1332043232000" expanded="true" signature="287:568" placeholder="..." />
+            <element signature="e#52#89#0" expanded="true" />
+            <marker date="1332045933000" expanded="true" signature="249:530" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BeefyLayoutTest/StackPanelTest.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="184" column="0" selection-start="8196" selection-end="8196" vertical-scroll-proportion="0.8886076">
+        <state line="206" column="49" selection-start="9308" selection-end="9308" vertical-scroll-proportion="0.8886076">
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
