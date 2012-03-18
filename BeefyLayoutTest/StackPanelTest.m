@@ -254,6 +254,44 @@ SPEC_BEGIN(StackPanelSpec)
                         xOffset += frame.size.width;
                     }
                 });
+
+                it(@"respects left margin on subview", ^{
+                    UIView *secondSubview = [stackPanel.subviews objectAtIndex:1];
+                    secondSubview.marginLeft = 20;
+
+                    [stackPanel layoutSubviews];
+
+                    CGFloat xOffset = 0;
+                    for (UIView *view in stackPanel.subviews) {
+                        CGRect frame = view.frame;
+                        if (view == secondSubview) {
+                            [[theValue(frame.origin.x) should] equal:theValue(xOffset + 20)];
+                            xOffset += frame.size.width + 20;
+                        } else {
+                            [[theValue(frame.origin.x) should] equal:theValue(xOffset)];
+                            xOffset += frame.size.width;
+                        }
+                    }
+                });
+
+                it(@"respects right margin on subview", ^{
+                    UIView *secondSubview = [stackPanel.subviews objectAtIndex:1];
+                    secondSubview.marginRight = 20;
+
+                    [stackPanel layoutSubviews];
+
+                    CGFloat xOffset = 0;
+                    for (UIView *view in stackPanel.subviews) {
+                        CGRect frame = view.frame;
+                        if (view == secondSubview) {
+                            [[theValue(frame.origin.x) should] equal:theValue(xOffset)];
+                            xOffset += frame.size.width + 20;
+                        } else {
+                            [[theValue(frame.origin.x) should] equal:theValue(xOffset)];
+                            xOffset += frame.size.width;
+                        }
+                    }
+                });
             });
 
             context(@"when given multiple views | horizontal | reversed", ^{

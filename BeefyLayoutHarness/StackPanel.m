@@ -49,21 +49,21 @@
     }
 }
 
+- (void)layoutSubviewsHorizontally {
+    CGFloat xOffset = 0;
+    for (UIView *subview in self.subviews) {
+        CGSize subviewSize = subview.bounds.size;
+        subview.frame = CGRectMake(xOffset + subview.marginLeft, 0, subviewSize.width, subviewSize.height);
+        xOffset += subviewSize.width + subview.marginLeft + subview.marginRight;
+    }
+}
+
 - (void)layoutSubviewsHorizontallyReversed {
     CGFloat xOffset = self.bounds.size.width;
     for (UIView *subview in self.subviews) {
         CGSize subviewSize = subview.bounds.size;
         xOffset -= subviewSize.width;
         subview.frame = CGRectMake(xOffset, 0, subviewSize.width, subviewSize.height);
-    }
-}
-
-- (void)layoutSubviewsHorizontally {
-    CGFloat xOffset = 0;
-    for (UIView *subview in self.subviews) {
-        CGSize subviewSize = subview.bounds.size;
-        subview.frame = CGRectMake(xOffset, 0, subviewSize.width, subviewSize.height);
-        xOffset += subviewSize.width;
     }
 }
 
