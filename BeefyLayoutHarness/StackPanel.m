@@ -1,3 +1,4 @@
+#import <CoreGraphics/CoreGraphics.h>
 #import "StackPanel.h"
 #import "UIView+BeefyLayout.h"
 
@@ -31,10 +32,24 @@
 }
 
 - (void)layoutSubviewsVertically {
+
+    CGFloat availableHeight = self.bounds.size.height;
+    for (UIView *subview in self.subviews) {
+        CGSize subviewSize = subview.bounds.size;
+        if(!subview.fillAvailableSpace) {
+            availableHeight -= subviewSize.height;
+        }
+    }
+
     CGFloat yOffset = 0;
     for (UIView *subview in self.subviews) {
         CGSize subviewSize = subview.bounds.size;
-        subview.frame = CGRectMake(subview.marginLeft, yOffset + subview.marginTop, subviewSize.width, subviewSize.height);
+        CGFloat subviewHeight = subviewSize.height;
+        if(subview.fillAvailableSpace) {
+            subviewHeight = availableHeight;
+        }
+
+        subview.frame = CGRectMake(subview.marginLeft, yOffset + subview.marginTop, subviewSize.width, subviewHeight);
         yOffset += subviewSize.height + subview.marginTop + subview.marginBottom;
     }
 }

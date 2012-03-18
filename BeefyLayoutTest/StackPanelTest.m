@@ -59,6 +59,17 @@ SPEC_BEGIN(StackPanelSpec)
                     [[theValue(childView1.frame.size.height) should] equal:theValue(200)];
                     [[theValue(childView1.frame.size.width) should] equal:theValue(400)];
                 });
+
+                it(@"stretches 'fillAvailableSpace' subview to width of parent", ^{
+                    stackPanel.frame = CGRectMake(0, 0, 3000, 1000);
+                    UIView *subview = [stackPanel.subviews objectAtIndex:0];
+                    subview.fillAvailableSpace = YES;
+
+                    [stackPanel layoutSubviews];
+
+                    [[theValue(subview.frame.size.height) should] equal:theValue(1000)];
+                    [[theValue(subview.frame.size.width) should] equal:theValue(400)];
+                });
             });
 
             context(@"when given multiple views | vertical | not reversed", ^{
