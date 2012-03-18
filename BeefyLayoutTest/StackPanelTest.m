@@ -298,6 +298,20 @@ SPEC_BEGIN(StackPanelSpec)
 
                     [[theValue(thirdSubview.frame.origin.y) should] equal:theValue(0)];
                 });
+
+                it(@"takes subview margins into account when stretching 'fillAvailableSpace' subviews", ^{
+                    stackPanel.frame = CGRectMake(0, 0, 3000, 1000);
+                    UIView *secondSubview = [stackPanel.subviews objectAtIndex:1];
+                    secondSubview.fillAvailableSpace = YES;
+                    for (UIView *view in stackPanel.subviews) {
+                        view.marginTop = 5.0f;
+                        view.marginBottom = 10.0f;
+                    }
+
+                    [stackPanel layoutSubviews];
+
+                    [[theValue(secondSubview.frame.size.height) should] equal:theValue(555)];
+                });
             });
 
             context(@"when given multiple views | horizontal | not reversed", ^{
