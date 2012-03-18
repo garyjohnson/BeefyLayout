@@ -19,6 +19,14 @@ SPEC_BEGIN(StackPanelSpec)
                     [stackPanel addSubview:childView1];
                 });
 
+                it(@"defaults to vertical orientation", ^{
+                    [[theValue(stackPanel.orientation) should] equal:theValue(Vertical)];
+                });
+
+                it(@"defaults to not being reversed", ^{
+                    [[theValue(stackPanel.isReversed) should] equal:theValue(NO)];
+                });
+
                 it(@"lays out subview at origin", ^{
                     [stackPanel layoutSubviews];
 
@@ -139,6 +147,18 @@ SPEC_BEGIN(StackPanelSpec)
 
                     for(UIView *view in stackPanel.subviews) {
                         [[theValue(view.frame.origin.y) should] equal:theValue(0)];
+                    }
+                });
+
+                it(@"stacks each child to the right of previous one", ^{
+                    [stackPanel layoutSubviews];
+
+                    CGSize stackPanelSize = stackPanel.bounds.size;
+                    CGFloat xOffset = 0;
+                    for(UIView *view in stackPanel.subviews) {
+                        CGRect frame = view.frame;
+                        [[theValue(frame.origin.x) should] equal:theValue(xOffset)];
+                        xOffset += frame.size.width;
                     }
                 });
             });

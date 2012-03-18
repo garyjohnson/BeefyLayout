@@ -1,3 +1,4 @@
+#import <CoreGraphics/CoreGraphics.h>
 #import "StackPanel.h"
 
 @implementation StackPanel
@@ -25,9 +26,11 @@
             }
         }
     } else if(orientation_ == Horizontal) {
+        CGFloat xOffset = 0;
         for (UIView *subview in self.subviews) {
             CGSize size = subview.bounds.size;
-            subview.frame = CGRectMake(0, 0, size.width, size.height);
+            subview.frame = CGRectMake(xOffset, 0, size.width, size.height);
+            xOffset += size.width;
         }
     }
 }

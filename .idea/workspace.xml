@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8efc463e-c569-4587-9c1f-2a01b2596d10" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BeefyLayoutHarness/StackPanel.h" afterPath="$PROJECT_DIR$/BeefyLayoutHarness/StackPanel.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BeefyLayoutHarness/StackPanel.m" afterPath="$PROJECT_DIR$/BeefyLayoutHarness/StackPanel.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BeefyLayoutTest/StackPanelTest.m" afterPath="$PROJECT_DIR$/BeefyLayoutTest/StackPanelTest.m" />
     </list>
@@ -29,7 +30,7 @@
       <file leaf-file-name="StackPanelTest.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BeefyLayoutTest/StackPanelTest.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="141" column="20" selection-start="6270" selection-end="6270" vertical-scroll-proportion="0.0">
+            <state line="159" column="16" selection-start="6986" selection-end="6986" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -37,10 +38,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StackPanel.h" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="StackPanel.h" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BeefyLayoutHarness/StackPanel.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="12" selection-start="52" selection-end="52" vertical-scroll-proportion="0.11392405">
+            <state line="8" column="0" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -55,13 +56,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StackPanel.m" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="StackPanel.m" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BeefyLayoutHarness/StackPanel.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="8" selection-start="840" selection-end="840" vertical-scroll-proportion="0.0">
+            <state line="18" column="9" selection-start="554" selection-end="554" vertical-scroll-proportion="0.35443038">
               <folding>
-                <element signature="e#52#89#0" expanded="true" />
-                <marker date="1332019741000" expanded="true" signature="249:530" placeholder="..." />
+                <element signature="e#0#37#0" expanded="true" />
+                <marker date="1332043232000" expanded="true" signature="287:568" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -86,11 +87,14 @@
         <option value="$PROJECT_DIR$/BeefyLayoutHarness/BeefyLayoutHarness/BeefyLayoutHarness/AppDelegate.m" />
         <option value="$PROJECT_DIR$/BeefyLayoutHarness/BeefyLayoutHarness/BeefyLayoutHarness/ViewController.h" />
         <option value="$PROJECT_DIR$/BeefyLayoutHarness/BeefyLayoutHarness/BeefyLayoutHarness/ViewController.m" />
+        <option value="$PROJECT_DIR$/BeefyLayoutHarness/StackPanel.h" />
         <option value="$PROJECT_DIR$/BeefyLayoutTest/StackPanelTest.m" />
         <option value="$PROJECT_DIR$/BeefyLayoutHarness/StackPanel.m" />
-        <option value="$PROJECT_DIR$/BeefyLayoutHarness/StackPanel.h" />
       </list>
     </option>
+  </component>
+  <component name="PerforceDirect.Settings">
+    <option name="myCanGoOffline" value="true" />
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
@@ -123,16 +127,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="DirectoryView.Xcode">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BeefyLayout" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeDirectoryView$1$1" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -175,16 +169,26 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="DirectoryView.Xcode">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BeefyLayout" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeDirectoryView$1$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="XcodeSettings" />
     <property name="FullScreen" value="false" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="OCUnit.BeefyLayoutTest">
     <configuration default="false" name="BeefyLayoutHarness" type="AppleRunConfiguration" factoryName="Application" temporary="true" SCHEME_NAME="BeefyLayoutHarness" PROJECT_NAME="BeefyLayoutHarness" TARGET_NAME="BeefyLayoutHarness" CONFIG_NAME="Debug" DESTINATION_ID="iphonesimulator_5.1_1" RUN_TARGET_PROJECT_NAME="BeefyLayoutHarness" RUN_TARGET_NAME="BeefyLayoutHarness" DEBUGGER="LLDB" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
@@ -237,7 +241,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28231293" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28231293" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -303,14 +307,19 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/BeefyLayoutHarness/AppDelegate.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BeefyLayoutHarness/StackPanel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BeefyLayoutTest/StackPanelTest.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="20" selection-start="6270" selection-end="6270" vertical-scroll-proportion="0.0">
+        <state line="159" column="16" selection-start="6986" selection-end="6986" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
@@ -319,18 +328,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BeefyLayoutHarness/StackPanel.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="8" selection-start="840" selection-end="840" vertical-scroll-proportion="0.0">
+        <state line="18" column="9" selection-start="554" selection-end="554" vertical-scroll-proportion="0.35443038">
           <folding>
-            <element signature="e#52#89#0" expanded="true" />
-            <marker date="1332019741000" expanded="true" signature="249:530" placeholder="..." />
+            <element signature="e#0#37#0" expanded="true" />
+            <marker date="1332043232000" expanded="true" signature="287:568" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BeefyLayoutHarness/StackPanel.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="12" selection-start="52" selection-end="52" vertical-scroll-proportion="0.11392405">
-          <folding />
         </state>
       </provider>
     </entry>
