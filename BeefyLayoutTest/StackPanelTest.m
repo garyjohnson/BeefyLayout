@@ -367,6 +367,25 @@ SPEC_BEGIN(StackPanelSpec)
                         }
                     }
                 });
+
+                it(@"respects right margin on subview", ^{
+                    UIView *secondSubview = [stackPanel.subviews objectAtIndex:1];
+                    secondSubview.marginRight = 20;
+
+                    [stackPanel layoutSubviews];
+
+                    CGFloat xOffset = stackPanel.bounds.size.width;
+                    for (UIView *view in stackPanel.subviews) {
+                        CGRect frame = view.frame;
+                        if (view == secondSubview) {
+                            xOffset -= (frame.size.width + 20);
+                            [[theValue(frame.origin.x) should] equal:theValue(xOffset)];
+                        } else {
+                            xOffset -= frame.size.width;
+                            [[theValue(frame.origin.x) should] equal:theValue(xOffset)];
+                        }
+                    }
+                });
             });
         });
 
