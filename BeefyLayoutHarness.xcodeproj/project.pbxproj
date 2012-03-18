@@ -18,7 +18,6 @@
 		8C523E12151443FE007D9B09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C523E11151443FE007D9B09 /* main.m */; };
 		8C523E16151443FF007D9B09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C523E15151443FF007D9B09 /* AppDelegate.m */; };
 		8C523E19151443FF007D9B09 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C523E17151443FF007D9B09 /* MainStoryboard_iPhone.storyboard */; };
-		8C523E1C151443FF007D9B09 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C523E1A151443FF007D9B09 /* MainStoryboard_iPad.storyboard */; };
 		8C523EAE151450A7007D9B09 /* StackPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C523EAD151450A7007D9B09 /* StackPanel.m */; };
 		8C523EAE151450A7007D9B0B /* StackPanelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C523EAE151450A7007D9B0A /* StackPanelTest.m */; };
 		8CCF8E0D1514E2F00015A0E9 /* KWAfterAllNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF8D791514E2F00015A0E9 /* KWAfterAllNode.m */; };
@@ -112,7 +111,6 @@
 		8C523E14151443FF007D9B09 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8C523E15151443FF007D9B09 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8C523E18151443FF007D9B09 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		8C523E1B151443FF007D9B09 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		8C523EAC151450A7007D9B09 /* StackPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackPanel.h; sourceTree = "<group>"; };
 		8C523EAD151450A7007D9B09 /* StackPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackPanel.m; sourceTree = "<group>"; };
 		8C523EAE151450A7007D9B0A /* StackPanelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackPanelTest.m; sourceTree = "<group>"; };
@@ -352,7 +350,6 @@
 				8C523E14151443FF007D9B09 /* AppDelegate.h */,
 				8C523E15151443FF007D9B09 /* AppDelegate.m */,
 				8C523E17151443FF007D9B09 /* MainStoryboard_iPhone.storyboard */,
-				8C523E1A151443FF007D9B09 /* MainStoryboard_iPad.storyboard */,
 				8C523E0C151443FE007D9B09 /* Supporting Files */,
 				8C523EAC151450A7007D9B09 /* StackPanel.h */,
 				8C523EAD151450A7007D9B09 /* StackPanel.m */,
@@ -620,7 +617,6 @@
 			files = (
 				8C523E10151443FE007D9B09 /* InfoPlist.strings in Resources */,
 				8C523E19151443FF007D9B09 /* MainStoryboard_iPhone.storyboard in Resources */,
-				8C523E1C151443FF007D9B09 /* MainStoryboard_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -758,14 +754,6 @@
 				8C523E18151443FF007D9B09 /* en */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		8C523E1A151443FF007D9B09 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8C523E1B151443FF007D9B09 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
