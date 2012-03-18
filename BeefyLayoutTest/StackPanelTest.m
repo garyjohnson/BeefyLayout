@@ -1,8 +1,16 @@
-#import <CoreGraphics/CoreGraphics.h>
 #import "Kiwi.h"
 #import "StackPanel.h"
+#import "UIView+BeefyLayout.h"
 
-StackPanel *theStackPanel() {
+StackPanel *aStackPanelWithOneSubview() {
+    UIView *childView1 = [[[UIView alloc] init] autorelease];
+    childView1.frame = CGRectMake(20, 20, 400, 200);
+    StackPanel *stackPanel = [[[StackPanel alloc] init] autorelease];
+    [stackPanel addSubview:childView1];
+    return stackPanel;
+}
+
+StackPanel *aStackPanelWithMultipleSubviews() {
     UIView *childView1 = [[[UIView alloc] init] autorelease];
     childView1.frame = CGRectMake(20, 20, 400, 200);
     UIView *childView2 = [[[UIView alloc] init] autorelease];
@@ -10,26 +18,21 @@ StackPanel *theStackPanel() {
     UIView *childView3 = [[[UIView alloc] init] autorelease];
     childView3.frame = CGRectMake(20, 10, 400, 200);
     StackPanel *stackPanel = [[[StackPanel alloc] init] autorelease];
-
     [stackPanel addSubview:childView1];
     [stackPanel addSubview:childView2];
     [stackPanel addSubview:childView3];
-
     return stackPanel;
 }
 
 SPEC_BEGIN(StackPanelSpec)
 
         describe(@"StackPanel", ^{
-                __block StackPanel *stackPanel;
+            __block StackPanel *stackPanel;
 
             context(@"when given a single view", ^{
 
                 beforeEach(^{
-                    UIView *childView1 = [[[UIView alloc] init] autorelease];
-                    childView1.frame = CGRectMake(20, 20, 400, 200);
-                    stackPanel = [[[StackPanel alloc] init] autorelease];
-                    [stackPanel addSubview:childView1];
+                    stackPanel = aStackPanelWithOneSubview();
                 });
 
                 it(@"defaults to vertical orientation", ^{
@@ -59,13 +62,13 @@ SPEC_BEGIN(StackPanelSpec)
 
             context(@"when given multiple views | vertical | not reversed", ^{
                 beforeEach(^{
-                    stackPanel = theStackPanel();
+                    stackPanel = aStackPanelWithMultipleSubviews();
                 });
 
                 it(@"lays out subviews at X origin", ^{
                     [stackPanel layoutSubviews];
 
-                    for(UIView *view in stackPanel.subviews) {
+                    for (UIView *view in stackPanel.subviews) {
                         [[theValue(view.frame.origin.x) should] equal:theValue(0)];
                     }
                 });
@@ -74,30 +77,45 @@ SPEC_BEGIN(StackPanelSpec)
                     [stackPanel layoutSubviews];
 
                     CGFloat yOffset = 0;
-                    for(UIView *view in stackPanel.subviews) {
+                    for (UIView *view in stackPanel.subviews) {
                         CGRect frame = view.frame;
                         [[theValue(frame.origin.y) should] equal:theValue(yOffset)];
                         yOffset += frame.size.height;
                     }
                 });
+
+/*                it(@"respects left margin on subview", ^{
+                    UIView *secondSubview = [stackPanel.subviews objectAtIndex:1];
+                    secondSubview.marginLeft = 20;
+
+                    [stackPanel layoutSubviews];
+
+                    for (UIView *view in stackPanel.subviews) {
+                        if (view == secondSubview) {
+                            [[theValue(view.frame.origin.x) should] equal:theValue(20)];
+                        } else {
+                            [[theValue(view.frame.origin.x) should] equal:theValue(0)];
+                        }
+                    }
+                });*/
             });
 
             context(@"when given multiple views | vertical | reversed", ^{
                 beforeEach(^{
-                    stackPanel = theStackPanel();
+                    stackPanel = aStackPanelWithMultipleSubviews();
                     stackPanel.isReversed = YES;
                 });
 
                 it(@"lays out subviews at X origin", ^{
                     [stackPanel layoutSubviews];
 
-                    for(UIView *view in stackPanel.subviews) {
+                    for (UIView *view in stackPanel.subviews) {
                         [[theValue(view.frame.origin.x) should] equal:theValue(0)];
                     }
                 });
 
                 it(@"places the first views bottom against the bottom of the stackpanel", ^{
-                   [stackPanel layoutSubviews];
+                    [stackPanel layoutSubviews];
 
                     UIView *firstView = [stackPanel.subviews objectAtIndex:0];
                     CGPoint origin = firstView.frame.origin;
@@ -111,7 +129,7 @@ SPEC_BEGIN(StackPanelSpec)
 
                     CGSize stackPanelSize = stackPanel.bounds.size;
                     CGFloat yOffset = stackPanelSize.height;
-                    for(UIView *view in stackPanel.subviews) {
+                    for (UIView *view in stackPanel.subviews) {
                         CGRect frame = view.frame;
                         yOffset -= frame.size.height;
                         [[theValue(frame.origin.y) should] equal:theValue(yOffset)];
@@ -121,14 +139,14 @@ SPEC_BEGIN(StackPanelSpec)
 
             context(@"when given multiple views | horizontal | not reversed", ^{
                 beforeEach(^{
-                    stackPanel = theStackPanel();
+                    stackPanel = aStackPanelWithMultipleSubviews();
                     stackPanel.orientation = Horizontal;
                 });
 
                 it(@"lays out subviews at Y origin", ^{
                     [stackPanel layoutSubviews];
 
-                    for(UIView *view in stackPanel.subviews) {
+                    for (UIView *view in stackPanel.subviews) {
                         [[theValue(view.frame.origin.y) should] equal:theValue(0)];
                     }
                 });
@@ -136,9 +154,8 @@ SPEC_BEGIN(StackPanelSpec)
                 it(@"stacks each child to the right of previous one", ^{
                     [stackPanel layoutSubviews];
 
-                    CGSize stackPanelSize = stackPanel.bounds.size;
                     CGFloat xOffset = 0;
-                    for(UIView *view in stackPanel.subviews) {
+                    for (UIView *view in stackPanel.subviews) {
                         CGRect frame = view.frame;
                         [[theValue(frame.origin.x) should] equal:theValue(xOffset)];
                         xOffset += frame.size.width;
@@ -148,7 +165,7 @@ SPEC_BEGIN(StackPanelSpec)
 
             context(@"when given multiple views | horizontal | reversed", ^{
                 beforeEach(^{
-                    stackPanel = theStackPanel();
+                    stackPanel = aStackPanelWithMultipleSubviews();
                     stackPanel.orientation = Horizontal;
                     stackPanel.isReversed = YES;
                 });
@@ -156,7 +173,7 @@ SPEC_BEGIN(StackPanelSpec)
                 it(@"lays out subviews at Y origin", ^{
                     [stackPanel layoutSubviews];
 
-                    for(UIView *view in stackPanel.subviews) {
+                    for (UIView *view in stackPanel.subviews) {
                         [[theValue(view.frame.origin.y) should] equal:theValue(0)];
                     }
                 });
@@ -176,7 +193,7 @@ SPEC_BEGIN(StackPanelSpec)
 
                     CGSize stackPanelSize = stackPanel.bounds.size;
                     CGFloat xOffset = stackPanelSize.width;
-                    for(UIView *view in stackPanel.subviews) {
+                    for (UIView *view in stackPanel.subviews) {
                         CGRect frame = view.frame;
                         xOffset -= frame.size.width;
                         [[theValue(frame.origin.x) should] equal:theValue(xOffset)];
@@ -185,4 +202,4 @@ SPEC_BEGIN(StackPanelSpec)
             });
         });
 
-SPEC_END
+        SPEC_END

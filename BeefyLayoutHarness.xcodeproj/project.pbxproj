@@ -11,6 +11,10 @@
 		8C17B9DD1514DCB00083C114 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C523E05151443FE007D9B09 /* UIKit.framework */; };
 		8C17B9DE1514DCB00083C114 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C523E07151443FE007D9B09 /* Foundation.framework */; };
 		8C17B9E41514DCB00083C114 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C17B9E21514DCB00083C114 /* InfoPlist.strings */; };
+		8C4639B9151611F300F79419 /* 271-ThreeColumn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4639B7151611F300F79419 /* 271-ThreeColumn.png */; };
+		8C4639BA151611F300F79419 /* 271-ThreeColumn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4639B7151611F300F79419 /* 271-ThreeColumn.png */; };
+		8C4639BB151611F300F79419 /* 272-SixColumn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4639B8151611F300F79419 /* 272-SixColumn.png */; };
+		8C4639BC151611F300F79419 /* 272-SixColumn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4639B8151611F300F79419 /* 272-SixColumn.png */; };
 		8C523E06151443FE007D9B09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C523E05151443FE007D9B09 /* UIKit.framework */; };
 		8C523E08151443FE007D9B09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C523E07151443FE007D9B09 /* Foundation.framework */; };
 		8C523E0A151443FE007D9B09 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C523E09151443FE007D9B09 /* CoreGraphics.framework */; };
@@ -92,6 +96,8 @@
 		8CD35BC51514E46100A42C1C /* StackPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C523EAD151450A7007D9B09 /* StackPanel.m */; };
 		8CD35BC71514E46600A42C1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C523E11151443FE007D9B09 /* main.m */; };
 		8CD35BC81514E46900A42C1C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C523E15151443FF007D9B09 /* AppDelegate.m */; };
+		8CE7565E151610C40018312F /* UIView+BeefyLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE7565E151610C40018312E /* UIView+BeefyLayout.m */; };
+		8CE7565E151610C400183130 /* UIView+BeefyLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE7565E151610C40018312E /* UIView+BeefyLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +106,8 @@
 		8C17B9E11514DCB00083C114 /* BeefyLayoutTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BeefyLayoutTest-Info.plist"; sourceTree = "<group>"; };
 		8C17B9E31514DCB00083C114 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8C17B9E81514DCB00083C114 /* BeefyLayoutTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeefyLayoutTest-Prefix.pch"; sourceTree = "<group>"; };
+		8C4639B7151611F300F79419 /* 271-ThreeColumn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "271-ThreeColumn.png"; sourceTree = "<group>"; };
+		8C4639B8151611F300F79419 /* 272-SixColumn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "272-SixColumn.png"; sourceTree = "<group>"; };
 		8C523E01151443FE007D9B09 /* BeefyLayoutHarness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeefyLayoutHarness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C523E05151443FE007D9B09 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8C523E07151443FE007D9B09 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -268,6 +276,8 @@
 		8CCF8E0A1514E2F00015A0E9 /* NSObject+KiwiVerifierAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KiwiVerifierAdditions.m"; sourceTree = "<group>"; };
 		8CCF8E0B1514E2F00015A0E9 /* NSValue+KiwiAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+KiwiAdditions.h"; sourceTree = "<group>"; };
 		8CCF8E0C1514E2F00015A0E9 /* NSValue+KiwiAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+KiwiAdditions.m"; sourceTree = "<group>"; };
+		8CE7565E151610C40018312E /* UIView+BeefyLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BeefyLayout.m"; sourceTree = "<group>"; };
+		8CE7565E151610C400183131 /* UIView+BeefyLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BeefyLayout.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -347,6 +357,9 @@
 		8C523E0B151443FE007D9B09 /* BeefyLayoutHarness */ = {
 			isa = PBXGroup;
 			children = (
+				8CE7565E151610C400183131 /* UIView+BeefyLayout.h */,
+				8CE7565E151610C40018312E /* UIView+BeefyLayout.m */,
+				8CE7565E151610C400183129 /* Resources */,
 				8C523E14151443FF007D9B09 /* AppDelegate.h */,
 				8C523E15151443FF007D9B09 /* AppDelegate.m */,
 				8C523E17151443FF007D9B09 /* MainStoryboard_iPhone.storyboard */,
@@ -538,6 +551,15 @@
 			path = Kiwi/Kiwi;
 			sourceTree = "<group>";
 		};
+		8CE7565E151610C400183129 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8C4639B7151611F300F79419 /* 271-ThreeColumn.png */,
+				8C4639B8151611F300F79419 /* 272-SixColumn.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -608,6 +630,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C17B9E41514DCB00083C114 /* InfoPlist.strings in Resources */,
+				8C4639BA151611F300F79419 /* 271-ThreeColumn.png in Resources */,
+				8C4639BC151611F300F79419 /* 272-SixColumn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +641,8 @@
 			files = (
 				8C523E10151443FE007D9B09 /* InfoPlist.strings in Resources */,
 				8C523E19151443FF007D9B09 /* MainStoryboard_iPhone.storyboard in Resources */,
+				8C4639B9151611F300F79419 /* 271-ThreeColumn.png in Resources */,
+				8C4639BB151611F300F79419 /* 272-SixColumn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,6 +742,7 @@
 				8CD35BC51514E46100A42C1C /* StackPanel.m in Sources */,
 				8CD35BC71514E46600A42C1C /* main.m in Sources */,
 				8CD35BC81514E46900A42C1C /* AppDelegate.m in Sources */,
+				8CE7565E151610C400183130 /* UIView+BeefyLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,6 +753,7 @@
 				8C523E12151443FE007D9B09 /* main.m in Sources */,
 				8C523E16151443FF007D9B09 /* AppDelegate.m in Sources */,
 				8C523EAE151450A7007D9B09 /* StackPanel.m in Sources */,
+				8CE7565E151610C40018312F /* UIView+BeefyLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
