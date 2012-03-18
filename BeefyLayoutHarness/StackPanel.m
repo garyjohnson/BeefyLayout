@@ -45,6 +45,7 @@
         CGSize subviewSize = subview.bounds.size;
         yOffset -= subviewSize.height;
         subview.frame = CGRectMake(subview.marginLeft, yOffset, subviewSize.width, subviewSize.height);
+        yOffset -= subview.marginTop;
     }
 }
 

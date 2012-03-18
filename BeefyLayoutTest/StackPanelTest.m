@@ -189,6 +189,26 @@ SPEC_BEGIN(StackPanelSpec)
                         }
                     }
                 });
+
+                it(@"respects top margin on subview", ^{
+                    UIView *secondSubview = [stackPanel.subviews objectAtIndex:1];
+                    UIView *thirdSubview = [stackPanel.subviews objectAtIndex:2];
+                    secondSubview.marginTop = 20;
+
+                    [stackPanel layoutSubviews];
+
+                    CGFloat yOffset = 0;
+                    for (UIView *view in stackPanel.subviews) {
+                        CGRect frame = view.frame;
+                        if (view == thirdSubview) {
+                            yOffset -= (frame.size.height + 20);
+                            [[theValue(frame.origin.y) should] equal:theValue(yOffset)];
+                        } else {
+                            yOffset -= frame.size.height;
+                            [[theValue(frame.origin.y) should] equal:theValue(yOffset)];
+                        }
+                    }
+                });
             });
 
             context(@"when given multiple views | horizontal | not reversed", ^{
