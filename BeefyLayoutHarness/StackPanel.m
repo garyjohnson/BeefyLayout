@@ -4,6 +4,9 @@
 @interface StackPanel ()
 - (void)layoutSubviewsHorizontallyReversed;
 
+- (CGFloat)availableHeightForEachFillSubview;
+
+
 - (void)layoutSubviewsVertically;
 
 - (void)layoutSubviewsVerticallyReversed;
@@ -31,16 +34,7 @@
 }
 
 - (void)layoutSubviewsVertically {
-
-    CGFloat availableHeight = self.bounds.size.height;
-    for (UIView *subview in self.subviews) {
-        CGSize subviewSize = subview.bounds.size;
-        if (!subview.fillAvailableSpace) {
-            availableHeight -= subviewSize.height;
-        }
-        availableHeight -= (subview.marginBottom + subview.marginTop);
-    }
-
+    CGFloat availableHeight = [self availableHeightForEachFillSubview];
     CGFloat yOffset = 0;
     for (UIView *subview in self.subviews) {
         CGSize subviewSize = subview.bounds.size;
@@ -55,11 +49,16 @@
 }
 
 - (void)layoutSubviewsVerticallyReversed {
+    CGFloat availableHeight = [self availableHeightForEachFillSubview];
     CGFloat yOffset = self.bounds.size.height;
     for (UIView *subview in self.subviews) {
         CGSize subviewSize = subview.bounds.size;
-        yOffset -= (subviewSize.height + subview.marginBottom);
-        subview.frame = CGRectMake(subview.marginLeft, yOffset, subviewSize.width, subviewSize.height);
+        CGFloat subviewHeight = subviewSize.height;
+        if (subview.fillAvailableSpace) {
+            subviewHeight = availableHeight;
+        }
+        yOffset -= (subviewHeight + subview.marginBottom);
+        subview.frame = CGRectMake(subview.marginLeft, yOffset, subviewSize.width, subviewHeight);
         yOffset -= subview.marginTop;
     }
 }
@@ -81,6 +80,18 @@
         subview.frame = CGRectMake(xOffset, subview.marginTop, subviewSize.width, subviewSize.height);
         xOffset -= subview.marginLeft;
     }
+}
+
+- (CGFloat)availableHeightForEachFillSubview {
+    CGFloat availableHeight = self.bounds.size.height;
+    for (UIView *subview in self.subviews) {
+        CGSize subviewSize = subview.bounds.size;
+        if (!subview.fillAvailableSpace) {
+            availableHeight -= subviewSize.height;
+        }
+        availableHeight -= (subview.marginBottom + subview.marginTop);
+    }
+    return availableHeight;
 }
 
 @end
