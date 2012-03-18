@@ -287,6 +287,17 @@ SPEC_BEGIN(StackPanelSpec)
                     [[theValue(secondSubview.frame.size.height) should] equal:theValue(600)];
                     [[theValue(secondSubview.frame.size.width) should] equal:theValue(400)];
                 });
+
+                it(@"lays out subview after 'fillAvailableSpace' subview at correct position", ^{
+                    stackPanel.frame = CGRectMake(0, 0, 3000, 1000);
+                    UIView *secondSubview = [stackPanel.subviews objectAtIndex:1];
+                    UIView *thirdSubview = [stackPanel.subviews objectAtIndex:2];
+                    secondSubview.fillAvailableSpace = YES;
+
+                    [stackPanel layoutSubviews];
+
+                    [[theValue(thirdSubview.frame.origin.y) should] equal:theValue(0)];
+                });
             });
 
             context(@"when given multiple views | horizontal | not reversed", ^{
