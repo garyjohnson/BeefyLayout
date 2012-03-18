@@ -1,4 +1,7 @@
-Currently StackPanel and supporting files are in BeefyLayoutHarness project, but eventually they will be split out into a seperate project. To use BeefyLayout, include the following files in your project: 
+Currently StackPanel and supporting files are in BeefyLayoutHarness project, 
+but eventually they will be split out into a seperate project. 
+
+To use BeefyLayout, include the following files in your project: 
  *StackPanel.h
  *StackPanel.m
  *UIView+BeefyLayout.h
