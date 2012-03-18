@@ -76,11 +76,16 @@
 }
 
 - (void)layoutSubviewsHorizontallyReversed {
+    CGFloat availableWidth = [self availableWidthForEachFillSubview];
     CGFloat xOffset = self.bounds.size.width;
     for (UIView *subview in self.subviews) {
         CGSize subviewSize = subview.bounds.size;
-        xOffset -= subviewSize.width + subview.marginRight;
-        subview.frame = CGRectMake(xOffset, subview.marginTop, subviewSize.width, subviewSize.height);
+        CGFloat subviewWidth = subviewSize.width;
+        if (subview.fillAvailableSpace) {
+            subviewWidth = availableWidth;
+        }
+        xOffset -= subviewWidth + subview.marginRight;
+        subview.frame = CGRectMake(xOffset, subview.marginTop, subviewWidth, subviewSize.height);
         xOffset -= subview.marginLeft;
     }
 }
