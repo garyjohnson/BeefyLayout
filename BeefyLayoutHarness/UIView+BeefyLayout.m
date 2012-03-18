@@ -18,7 +18,7 @@ static char MARGIN_LEFT_KEY;
 }
 
 - (void)setMarginBottom:(CGFloat)margin {
-    objc_setAssociatedObject(self, &MARGIN_BOTTOM_KEY, [NSNumber numberWithFloat:margin], OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, &MARGIN_BOTTOM_KEY, [NSNumber numberWithFloat:margin], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (CGFloat)marginTop {
@@ -26,7 +26,7 @@ static char MARGIN_LEFT_KEY;
 }
 
 - (void)setMarginTop:(CGFloat)margin {
-    objc_setAssociatedObject(self, &MARGIN_TOP_KEY, [NSNumber numberWithFloat:margin], OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, &MARGIN_TOP_KEY, [NSNumber numberWithFloat:margin], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (CGFloat)marginRight {
@@ -34,7 +34,7 @@ static char MARGIN_LEFT_KEY;
 }
 
 - (void)setMarginRight:(CGFloat)margin {
-    objc_setAssociatedObject(self, &MARGIN_RIGHT_KEY, [NSNumber numberWithFloat:margin], OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, &MARGIN_RIGHT_KEY, [NSNumber numberWithFloat:margin], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (CGFloat)marginLeft {
@@ -42,7 +42,7 @@ static char MARGIN_LEFT_KEY;
 }
 
 - (void)setMarginLeft:(CGFloat)margin {
-    objc_setAssociatedObject(self, &MARGIN_LEFT_KEY, [NSNumber numberWithFloat:margin], OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, &MARGIN_LEFT_KEY, [NSNumber numberWithFloat:margin], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end
