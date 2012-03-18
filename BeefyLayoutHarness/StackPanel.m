@@ -63,7 +63,7 @@
     for (UIView *subview in self.subviews) {
         CGSize subviewSize = subview.bounds.size;
         xOffset -= subviewSize.width + subview.marginRight;
-        subview.frame = CGRectMake(xOffset, 0, subviewSize.width, subviewSize.height);
+        subview.frame = CGRectMake(xOffset, subview.marginTop, subviewSize.width, subviewSize.height);
         xOffset -= subview.marginLeft;
     }
 }

@@ -386,6 +386,22 @@ SPEC_BEGIN(StackPanelSpec)
                         }
                     }
                 });
+
+                it(@"respects top margin on subview", ^{
+                    UIView *secondSubview = [stackPanel.subviews objectAtIndex:1];
+                    secondSubview.marginTop = 20;
+
+                    [stackPanel layoutSubviews];
+
+                    for (UIView *view in stackPanel.subviews) {
+                        CGRect frame = view.frame;
+                        if (view == secondSubview) {
+                            [[theValue(frame.origin.y) should] equal:theValue(20)];
+                        } else {
+                            [[theValue(frame.origin.y) should] equal:theValue(0)];
+                        }
+                    }
+                });
             });
         });
 

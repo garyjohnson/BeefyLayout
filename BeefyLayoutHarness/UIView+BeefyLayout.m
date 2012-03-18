@@ -7,6 +7,7 @@ static char MARGIN_BOTTOM_KEY;
 static char MARGIN_TOP_KEY;
 static char MARGIN_RIGHT_KEY;
 static char MARGIN_LEFT_KEY;
+static char FILL_AVAILABLE_SPACE_KEY;
 
 @dynamic marginBottom;
 @dynamic marginTop;
@@ -43,6 +44,14 @@ static char MARGIN_LEFT_KEY;
 
 - (void)setMarginLeft:(CGFloat)margin {
     objc_setAssociatedObject(self, &MARGIN_LEFT_KEY, [NSNumber numberWithFloat:margin], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (BOOL)fillAvailableSpace {
+    return [((NSNumber *)objc_getAssociatedObject(self, &FILL_AVAILABLE_SPACE_KEY)) boolValue];
+}
+
+- (void)setFillAvailableSpace:(BOOL)fillSpace {
+    objc_setAssociatedObject(self, &FILL_AVAILABLE_SPACE_KEY, [NSNumber numberWithBool:fillSpace], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end
