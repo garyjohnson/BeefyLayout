@@ -1,8 +1,8 @@
 Currently StackPanel and supporting files are in BeefyLayoutHarness project, but eventually they will be split out into a seperate project. To use BeefyLayout, include the following files in your project: 
-* StackPanel.h
-* StackPanel.m
-* UIView+BeefyLayout.h
-* UIView+BeefyLayout.m.
+ *StackPanel.h
+ *StackPanel.m
+ *UIView+BeefyLayout.h
+ *UIView+BeefyLayout.m.
 
 To run the project tests, you will need Kiwi (submodule). From the root directory, run
 git submodule init
